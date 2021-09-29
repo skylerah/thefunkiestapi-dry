@@ -2,10 +2,12 @@ import React from "react"
 import { useEffect, useState } from "react";
 import "./index.css";
 
+
+
 export default function App() {
   //Where the state is initially set for the component
   const [value, setValue] = useState();
-  const [isInitialized, setInitialized] = useState()
+  const [isInitialized, setInitialized] = useState();
 
   useEffect(() => {
     fetch("https://thefunkiestapiv2.azurewebsites.net/api/getScore?name=funkiestApiScore", {
@@ -33,9 +35,10 @@ export default function App() {
       })
         .then((res) => res.json())
         .then((res) => {
-          setValue(res.data);
+          setValue(res.data);  
         });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]); // useEffect will fire when one of these dependencies changes
 
   const increment = () => {
