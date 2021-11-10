@@ -2,8 +2,6 @@ import React from "react"
 import { useEffect, useState } from "react";
 import "./index.css";
 
-
-
 export default function App() {
   //Where the state is initially set for the component
   const [value, setValue] = useState();
@@ -59,7 +57,7 @@ export default function App() {
     <div className="App">
       <h2>This is a number: {value} 😎</h2>
       <h3>
-        (This number is from the return data from an
+        (This number is from WOHOO return data from an
         API call and wearing cool sunglasses)
       </h3>
       <h3>Click a button below to make it change!</h3>
